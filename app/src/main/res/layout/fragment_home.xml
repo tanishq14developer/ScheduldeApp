@@ -116,11 +116,7 @@
                 android:paddingEnd="20dp"
                 android:background="@drawable/text_shape"/>
         </LinearLayout>
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/heading"/>
+
         <RelativeLayout
             android:id="@+id/phase1"
             android:layout_below="@id/heading"
@@ -129,18 +125,35 @@
             android:layout_marginTop="10dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp">
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageslider"
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="@color/screen_3_bg"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="301dp"
+                android:layout_height="300dp"
                 android:orientation="horizontal">
+
 
                 <RelativeLayout
                     android:id="@+id/rlone"
-                    android:layout_width="263dp"
-                    android:layout_height="289dp"
+                    android:layout_width="250dp"
+                    android:layout_height="290dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/shape_rectangle"
                     android:elevation="5dp"
                     android:paddingLeft="35dp"
@@ -172,6 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/darkuser"
+                        android:fontFamily="@font/opensans_regular"
                         android:layout_marginTop="25dp"
                         android:text="Back End"
                         android:textColor="@color/white"
@@ -184,6 +198,7 @@
                         android:layout_below="@id/beck"
                         android:layout_marginTop="10dp"
                         android:text="Development"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -194,6 +209,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="50dp"
                         android:text="October 2020"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -202,11 +218,10 @@
                 <RelativeLayout
                     android:id="@+id/rltwo"
                     android:layout_width="250dp"
-                    android:layout_height="300dp"
+                    android:layout_height="290dp"
                     android:layout_below="@id/heading"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/shape_rectangle"
                     android:elevation="5dp"
                     android:paddingLeft="35dp"
@@ -240,6 +255,7 @@
                         android:layout_below="@id/darkuser1"
                         android:layout_marginTop="25dp"
                         android:text="Android"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -250,6 +266,7 @@
                         android:layout_below="@id/beck1"
                         android:layout_marginTop="10dp"
                         android:text="Development"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -260,6 +277,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="50dp"
                         android:text="October 2020"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -267,11 +285,10 @@
                 <RelativeLayout
                     android:id="@+id/rlthree"
                     android:layout_width="250dp"
-                    android:layout_height="300dp"
+                    android:layout_height="290dp"
                     android:layout_below="@id/heading"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/shape_rectangle"
                     android:elevation="5dp"
                     android:paddingLeft="35dp"
@@ -305,6 +322,7 @@
                         android:layout_below="@id/darkuser2"
                         android:layout_marginTop="25dp"
                         android:text="ios"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -315,6 +333,7 @@
                         android:layout_below="@id/beck2"
                         android:layout_marginTop="10dp"
                         android:text="Development"
+                        android:fontFamily="@font/opensans_regular"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
 
@@ -331,39 +350,29 @@
                 </RelativeLayout>
             </LinearLayout>
     </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_below="@id/phase1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/text"
+                android:textSize="22sp"
+                android:layout_marginStart="30dp"/>
 
-                <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dot1"
-                    android:layout_below="@id/phase1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    app:dotsColor="@color/screen_3_bg"
-                    app:dotsSize="10dp"
-                    app:dotsSpacing="5dp">
-                </com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator>
-
-
-
-        <TextView
-            android:id="@+id/progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Progress"
-            android:layout_below="@id/dot1"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/opensans_semibold"
-            android:textColor="@color/text"
-            android:textSize="22sp"
-            android:layout_marginStart="30dp"/>
         <RelativeLayout
             android:id="@+id/taskupdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/progress"
             android:background="@drawable/round_rect_shape"
-            android:layout_marginTop="15dp"
+            android:layout_below="@id/progress"
+            android:layout_marginTop="10dp"
             android:paddingVertical="20dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
@@ -372,14 +381,14 @@
 
 
 
+
             <ImageView
                 android:id="@+id/calender"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:paddingVertical="10dp"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/round_shape_user"
                 android:src="@drawable/ic_calender" />
 
@@ -388,7 +397,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="55dp"
                 android:text="Project Name Here"
                 android:textColor="@color/text"
                 android:textStyle="bold"
@@ -399,7 +408,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="55dp"
                 android:layout_below="@id/projectdata"
                 android:text="2 Days"
                 android:textColor="@color/text"
@@ -407,6 +416,7 @@
                 android:fontFamily="@font/opensans_regular"/>
 
         </RelativeLayout>
+    </RelativeLayout>
     </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
