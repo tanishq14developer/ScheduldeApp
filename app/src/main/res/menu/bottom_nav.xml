@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="" />
+    <item
+        android:id="@+id/calender"
+        android:icon="@drawable/ic_asset_6"
+        android:title="" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_asset_7"
+        android:title="" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_asset_8"
+        android:title="" />
+
+</menu>
