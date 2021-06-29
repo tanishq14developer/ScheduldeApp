@@ -4,13 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screen_1_bg">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/sc_1_head"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/menu"
@@ -32,13 +30,23 @@
         android:paddingVertical="10dp"
         android:layout_marginTop="25dp"
         android:src="@drawable/ic_user" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sc_1_head">
+    <RelativeLayout
+        android:id="@+id/hello_daisy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sc_1_head">
 
         <TextView
             android:id="@+id/daisy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/menu"
-            android:layout_marginTop="25dp"
+
             android:layout_marginStart="25dp"
             android:fontFamily="@font/opensans_semibold"
             android:textColor="@color/text"
@@ -123,6 +131,7 @@
             android:id="@+id/indicator"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/phase1"
+            android:layout_marginTop="10dp"
             app:indicatorsToShow="3" />
 
 
@@ -141,76 +150,13 @@
                 android:layout_height="300dp"
                 app:cardSlider_indicator="@id/indicator" />
 
-                <RelativeLayout
-                    android:id="@+id/rlone"
-                    android:layout_width="250dp"
-                    android:layout_height="290dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/shape_rectangle"
-                    android:elevation="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="35dp">
 
-                    <ImageView
-                        android:id="@+id/darkuser"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="35dp"
-                        android:background="@drawable/square_shape"
-                        android:paddingVertical="10dp"
-                        android:src="@drawable/ic_user" />
-
-                    <TextView
-                        android:id="@+id/projectname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/opensans_semibold"
-                        android:gravity="center"
-                        android:text="Project Z"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/beck"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/darkuser"
-                        android:fontFamily="@font/opensans_regular"
-                        android:layout_marginTop="25dp"
-                        android:text="Back End"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/web"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/beck"
-                        android:layout_marginTop="10dp"
-                        android:text="Development"
-                        android:fontFamily="@font/opensans_regular"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="50dp"
-                        android:text="October 2020"
-                        android:fontFamily="@font/opensans_regular"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
-                </RelativeLayout>
     </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="175dp"
             android:layout_below="@id/phase1"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
             <TextView
                 android:id="@+id/progress"
                 android:layout_width="wrap_content"
