@@ -1,6 +1,5 @@
 package com.example.task.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,39 +11,34 @@ import androidx.fragment.app.Fragment;
 
 import com.example.task.Adapter.AdapterClass;
 import com.example.task.R;
-import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
-import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
-import com.smarteist.autoimageslider.SliderAnimations;
-import com.smarteist.autoimageslider.SliderView;
+import com.github.islamkhsh.CardSliderViewPager;
+
 
 
 
 public class fragment_home extends Fragment {
-    SliderView sliderView;
-    private AdapterClass aClass;
+
+    int list[];
+    AdapterClass adapterClass;
+
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view =inflater.inflate(R.layout.fragment_home, container, false);
-       sliderView = view.findViewById(R.id.imageslider);
-       aClass = new AdapterClass(fragment_home.this);
-       sliderView.setSliderAdapter(aClass);
-       sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
-       sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-       sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-       sliderView.setIndicatorSelectedColor(Color.BLUE);
-       sliderView.setIndicatorUnselectedColor(Color.GRAY);
-       sliderView.setScrollTimeInSec(3);
-       sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
-           @Override
-           public void onIndicatorClicked(int position) {
 
-           }
-       });
-       return view;
+        list = new int[3];
+        list[0] = R.id.rlone;
+        list[1] = R.id.rlone;
+        list[2] = R.id.rlone;
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        CardSliderViewPager cardSliderViewPager = (CardSliderViewPager) view.findViewById(R.id.view_pager);
+        adapterClass = new AdapterClass(list);
+        cardSliderViewPager.setAdapter(adapterClass);
+
+
+        return view;
     }
-
 
 
 }
