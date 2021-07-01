@@ -15,12 +15,14 @@ import com.example.task.fragment.fragment_calender;
 import com.example.task.fragment.fragment_home;
 import com.example.task.fragment.fragment_notification;
 import com.example.task.fragment.fragment_search;
+import com.github.islamkhsh.CardSliderViewPager;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Bottom_Nav extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     View notificationIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
